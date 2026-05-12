@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Community</title>
+
+<script>
+  var CONFIG = {
+    pixelId: '1974350263468951', 
+    channelName: 'Shub Learning Hub',
+    tgLink: 'https://t.me/+_mU39NchsOQ3OGRl',
+    timerSec: 15
+  };
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+if (CONFIG.pixelId !== '') {
+  fbq('init', CONFIG.pixelId);
+  fbq('track', 'PageView');
+}
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1974350263468951&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui, -apple-system, Segoe UI, sans-serif;-webkit-tap-highlight-color:transparent;}
+body{
+  background:#0a001a;
+  color:white;
+  overflow-x:hidden;
+  min-height: 100dvh;
+}
+
+/* LIGHT BG GLOW */
+body::before{
+  content:"";
+  position:fixed;
+  width:200%; height:200%;
+  background:
+  radial-gradient(circle at 20% 30%,#6a00ff40,transparent 40%),
+  radial-gradient(circle at 80% 70%,#00f7ff40,transparent 40%);
+  z-index:-1;
+}
+
+.section{ padding:35px 20px; text-align:center; width:100%; max-width: 500px; margin: 0 auto; }
+
+.hero h1{
+  font-size:34px; font-weight:900;
+  background:linear-gradient(90deg,#00f7ff,#a100ff);
+  -webkit-background-clip:text; color:transparent;
+  line-height: 1.2;
+}
+.hero p{ margin-top:8px; font-size:13px; color:#ccc; }
+.members{ margin-top:12px; font-size:16px; color:#00f7ff; font-weight:700; }
+
+.timer-box { margin-top: 20px; background: rgba(0, 247, 255, 0.1); border: 1px solid rgba(0, 247, 255, 0.3); padding: 14px; border-radius: 14px; }
+.t-label { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+.t-val { font-size: 30px; font-weight: 900; color: #fff; text-shadow: 0 0 8px #00f7ff; }
+
+.btn{
+  margin-top:20px;
+  padding:16px; border-radius:50px; font-size:16px; font-weight:900;
+  text-decoration:none; display:block; border:none; cursor:pointer;
+  background:linear-gradient(45deg,#00f7ff,#a100ff); color:black;
+  box-shadow:0 0 20px rgba(0,247,255,0.4);
+}
+.btn:active{ transform:scale(0.97); }
+
+.live-box{
+  margin-top:30px; background:#120028; padding:20px;
+  border-radius:18px; box-shadow:0 0 20px rgba(161,0,255,0.25);
+}
+.live-box h2{ color:#00f7ff; margin-bottom:12px; font-size: 18px; }
+.trade{
+  background:#1a003d; padding:10px 12px; margin:8px 0;
+  border-radius:10px; display:flex; justify-content:space-between; font-size: 13px;
+}
+.green{color:#00ff66;font-weight:700;}
+.red{color:#ff3b3b;font-weight:700;}
+
+.cards{ margin-top:30px; display:flex; flex-direction:column; gap:12px; }
+.card{
+  background:#1a003d; padding:16px; border-radius:16px;
+  box-shadow:0 0 16px rgba(0,247,255,0.12);
+}
+.card h3{ font-size:22px; color:#00ff66; }
+.card p { font-size: 12px; color: #ccc; margin-top: 4px; }
+
+footer{ margin-top:30px; padding:16px; background:black; color:#888; font-size:10px; text-align: center; }
+</style>
+</head>
+
+<body>
+
+<section class="section hero">
+  <h1 id="dynName">Loading...</h1>
+  <p>Advanced Live Color Trend Analysis & Strategies</p>
+
+  <div class="members">🔥 65,000+ Active Members</div>
+
+  <div class="timer-box">
+    <div class="t-label">Redirecting securely in</div>
+    <div class="t-val" id="timeDisplay">--</div>
+  </div>
+
+  <a href="#" id="ctaBtn" class="btn">JOIN PRIVATE COMMUNITY</a>
+</section>
+
+<section class="section">
+  <div class="live-box">
+    <h2>📊 Live Trend Status</h2>
+    <div class="trade"><span>Trend Session 1</span><span class="green">+ 1515 Pts</span></div>
+    <div class="trade"><span>Trend Session 2</span><span class="green">+ 749 Pts</span></div>
+    <div class="trade"><span>Trend Session 3</span><span class="red">- 120 Pts</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="cards">
+    <div class="card"><h3>98.5%</h3><p>VIP Accuracy Rate</p></div>
+    <div class="card"><h3>Premium</h3><p>Member Status Available</p></div>
+  </div>
+</section>
+
+<footer>
+  18+ | Educational Purpose Only | <span id="footName"></span><br><br>
+  Disclaimer: We share trends and analysis for learning. Do your own research.
+</footer>
+
+<script>
+  document.getElementById('dynName').textContent = CONFIG.channelName;
+  document.getElementById('footName').textContent = CONFIG.channelName;
+  document.getElementById('ctaBtn').href = CONFIG.tgLink;
+
+  var timeLeft = CONFIG.timerSec;
+  var timeDisplay = document.getElementById('timeDisplay');
+
+  function doRedirect() {
+    window.location.href = CONFIG.tgLink;
+    setTimeout(() => { timeLeft = CONFIG.timerSec; startTimer(); }, 800);
+  }
+
+  function startTimer() {
+    var timerInt = setInterval(() => {
+      timeLeft--;
+      timeDisplay.textContent = timeLeft + 's';
+      if(timeLeft <= 0){ clearInterval(timerInt); doRedirect(); }
+    }, 1000);
+
+    document.getElementById('ctaBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      if(CONFIG.pixelId !== '') fbq('track', 'Subscribe');
+      clearInterval(timerInt);
+      doRedirect();
+    }, {once: true});
+  }
+
+  startTimer();
+</script>
+
+</body>
+</html>
